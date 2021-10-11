@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+用户名:<input type="checkbox" name="hobby" />java<input type="checkbox" name="hobby"/>c<input type="checkbox" name="hobby"/>c++
+<button onclick="CA()">全选</button>
+<button onclick="NA()">全不选</button>
+<button onclick="RV()">反选</button>
+
+</body>
+<script type="text/javascript">
+
+        function CA() {
+            var names = document.getElementsByName("hobby");
+            for (var i = 0; i < names.length; i++) {
+                names[i].checked = true;
+
+            }
+        }
+
+        function NA() {
+            var names = document.getElementsByName("hobby");
+            for (var i = 0; i < names.length; i++) {
+                names[i].checked = false;
+
+            }
+        }
+
+        function RV() {
+            var names = document.getElementsByName("hobby");
+            for (var i = 0; i < names.length; i++) {
+                if (names[i].checked) {
+                    names[i].checked = false;
+                } else {
+                    names[i].checked = true;
+                }
+            }
+        }
+
+
+</script>
+</html>
